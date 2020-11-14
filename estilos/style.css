@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* - - - variáveis - - -  */
+
 :root{
     --header-height:3rem;
     --font-semi:600;
 }
-/* color*/
+
+/* - - - cores - - -  */
 :root{
     --first-color:#4070f4;
     --second-color:#0E2431;
 }
 
+/* - - - fontes e tipografia - - -*/
 :root{
     --body-font: 'Roboto', sans-serif;
     --big-font-size:2rem;
@@ -19,13 +23,13 @@
 
 @media screen and (min-width: 768ox){
     :root{
-        --body-font: 'Poppins', sans-serif;
         --big-font-size:3.5rem;
         --h2-font-size: 2rem;
-        --normal-font-size:1.0rem;
+        --normal-font-size:1rem;
     }
-
 }
+
+/* - - - margem - - - */
 
 :root{
     --mb-1: 0.5rem;
@@ -36,6 +40,8 @@
     --mb-6: 3rem
 }
 
+/* - - - z index * * * */
+
 :root{
     --z-back:-10;
     --z-normal: 1;
@@ -43,13 +49,14 @@
     --z-fixed:100;
 }
 
+/* - - - base - - - */
+
 *,::before,::after{
     box-sizing: border-box;
-
 }
 
 html{
-    scroll-behavior: smoth;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -71,7 +78,6 @@ ul{
 
 a{
     text-decoration: none;
-
 }
 
 img{
@@ -107,14 +113,14 @@ img{
 }
 
 
-/* LAYOUT */
+/* - - - layout - - - */
 .bd-grid{
     max-width: 1024px;
     display: grid;
     grid-template-columns: 100%;
     grid-column-gap: 2rem;
-    width: cal(100% -2rem);
-    margin-left:var(--mb-2) ;
+    width: calc(100% - 2rem);
+    margin-left:var(--mb-2);
     margin-right: var(--mb-2);
 }
 
@@ -129,7 +135,7 @@ img{
 }
 
 /* NAV */
-nav{
+.nav{
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -168,7 +174,7 @@ nav{
     position: absolute;
     content: "";
     width: 100%;
-    height: 0.15rem;
+    height: 0.18rem;
     left: 0;
     top: 2rem;
     background-color: var(--first-color);
@@ -185,7 +191,7 @@ nav{
     cursor: pointer;
 }
 
-/*Active menu */
+/* - - - active menu - - -*/
 .active::after{
     position: absolute;
     content: "";
@@ -442,7 +448,7 @@ nav{
     }
 
     .nav{
-        height: cal(var(--header-height)+1rem);
+        height: calc(var(--header-height) + 1rem);
     }
     .nav__list{
         display:flex;
